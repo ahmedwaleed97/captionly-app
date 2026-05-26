@@ -31,15 +31,7 @@ st.markdown("""
         color: #e8e8f0;
     }
 
-    /* The main card that wraps our content */
-    .main-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 2.5rem;
-        margin: 1rem 0;
-        backdrop-filter: blur(10px);   /* frosted glass effect */
-    }
+
 
     /* The app logo/name at the top */
     .app-logo {
@@ -206,9 +198,9 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ─────────────────────────────────────────────
-#  Main Input Card
+
 # ─────────────────────────────────────────────
-st.markdown("<div class='main-card'>", unsafe_allow_html=True)
+
 
 col1, col2 = st.columns(2)
 with col1:

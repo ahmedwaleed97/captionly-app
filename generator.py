@@ -1,6 +1,11 @@
 from google import genai
 import os
 from dotenv import load_dotenv
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 
@@ -66,9 +71,14 @@ List them on one line separated by spaces.
 TIP:
 One specific, actionable tip about the best time, format, or strategy for posting this content on {platform}.
 """
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt
+        )
+        logger.info("Response received successfully")
+        return response.text
 
-    response = client.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=prompt
-    )
-    return response.text
+    except Exception as e:
+        logger.error(f"Gemini API failed: {e}")
+        return "Something went wrong."
