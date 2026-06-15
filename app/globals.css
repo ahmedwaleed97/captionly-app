@@ -12,3 +12,8 @@ body {
   min-height: 100vh;
   color: #e8e8f0;
 }
+
+select option {
+  background: #1a1a2e;
+  color: #e8e8f0;
+}
