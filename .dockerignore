@@ -1,0 +1,28 @@
+# Secrets — pass via --env or docker-compose env_file instead
+.env
+.env.local
+.env.*.local
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+
+# Node / Next.js
+node_modules/
+.next/
+
+# Git
+.git/
+.gitignore
+
+# Docker itself
+.dockerignore
+Dockerfile
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
